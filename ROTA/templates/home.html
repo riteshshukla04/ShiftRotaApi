@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us" >
+   <head>
+      <title>Shift ROTA</title>
+      <link rel="stylesheet" type="text/css" href="/static/admin/css/base.css">
+      <link rel="stylesheet" type="text/css" href="/static/admin/css/login.css">
+      <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.css">
+      <meta name="robots" content="NONE,NOARCHIVE">
+      <style>
+         .footer {
+           position: fixed;
+           left: 0;
+           bottom: 0;
+           width: 100%;
+           background-color: red;
+           color: white;
+           text-align: center;
+         }
+         </style>
+
+   </head>
+   <body class=" login"
+      data-admin-utc-offset="19800">
+      <!-- Container -->
+      <div id="container">
+         <!-- Header -->
+         <div id="header" >
+            <div >
+            <div id="branding">
+               <h1 id="site-name" "><a href="">ROTA NTPC Kahalgaon</a></h1>
+            </div>
+            </div>
+         </div>
+         <!-- END Header -->
+         <!-- Content -->
+         <div id="content" class="colM">
+            <div id="content-main">
+               <pclass="errornote">
+                  {% for message in messages %}
+                  <B>{{ message }}</B>
+                  {% endfor %}
+              </p>
+               <form action="" method="get" id="login-form" enctype="multipart/form-data">
+                   
+                   <label class="required" for="id_password"><B>Date: &nbsp &nbsp </B> </label><input type="date" name="query" id="query" value="{{ dateq }}">
+
+                  
+                 
+                  <br>
+                 
+      
+                  <br>
+                  <input type="submit" name="submit">
+
+               </form>
+            </div>
+            
+            {% if flag == "Tatwas" %}
+            <h1>Hello</h1>
+            {% elif flag  %}
+            <h1><b style="color: red;">Please Enter date after 01-01-2020</b></h1>
+            {% else  %}
+            <h1><b style="color: red;">Non Executive</b></h1>
+            <h1><b>Group A  - {{ na }}</b></h1>
+            <h1><b>Group B  - {{ nb }}</b></h1>
+            <h1><b>Group C - {{  nc }}</b></h1>
+            <h1><b>Group D  - {{ nd }}</b></h1>
+            <br>
+            <h1><b style="color: red;">Executive</b></h1>
+            <h1><b>Group A  - {{ ea }}</b></h1>
+            <h1><b>Group B  - {{ eb }}</b></h1>
+            <h1><b>Group C - {{  ec }}</b></h1>
+            <h1><b>Group D  - {{ ed }}</b></h1>
+            <br class="clear">
+            {% endif %}
+         </div>
+         <!-- END Content -->
+
+         <div id="footer">
+
+
+         </div>
+      </div>
+      <div class="footer">
+         Developed By RITESH KUMAR SHUKLA
+      </div>
+
+
+   </body>
+</html>
