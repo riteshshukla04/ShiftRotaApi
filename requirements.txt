@@ -1,6 +1,6 @@
 ﻿absl-py==0.13.0
 asgiref==3.4.1
-
+whitenoise
 defusedxml==0.7.1
 diff-match-patch==20200713
 Django==3.0.5
