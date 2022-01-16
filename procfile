@@ -1,1 +1,1 @@
-web: gunicorn ShiftRota.wsgi --log-file -
+web: gunicorn ShiftRota.wsgi
